@@ -42,7 +42,8 @@ exports.signup = async (req, res) => {
       },
     });
   } catch (err) {
-    res.status(500).json({ message: "Server error" });
+    console.error(err); // add this
+    res.status(500).json({ message: err.message }); // change this to see real error
   }
 };
 
@@ -75,6 +76,7 @@ exports.login = async (req, res) => {
       user: { id: user.id, name: user.name, email: user.email },
     });
   } catch (err) {
-    res.status(500).json({ message: "Server error" });
+    console.error(err); // add this
+    res.status(500).json({ message: err.message }); // change this to see real error
   }
 };
