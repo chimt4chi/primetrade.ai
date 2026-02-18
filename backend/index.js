@@ -11,10 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://primetrade-ai-blush.vercel.app/",
-    ],
+    origin: ["http://localhost:5173", "https://primetrade-ai-blush.vercel.app"],
     credentials: true,
   }),
 );
